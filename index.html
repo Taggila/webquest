@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Простой счетчик</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="link">
+      <div class="linktxt">
+        <a href="index.html">Счетчик</a>
+          <a href="genpas.html">генератор пароля</a>
+          <a href="zariki.html">зарики</a>
+          <a href="randomnum.html">угадай число</a>
+          <a href="temp.html">температура</a>
+          <a id="teg">Делал Хузин Дмитрий ПИ23-1Р(кол)</a>
+        </div>  
+    </div>
+
+  <div id="counter"><h1>0</h1></div>
+    <div class="buts">
+        <button onclick="increaseCounter()">Увеличить</button>
+        <button onclick="resetCounter()">Сброс</button>
+        <button onclick="decreaseCounter()">Уменьшить</button>
+    </div>
+
+  <script>
+    let count = 0;
+
+    function increaseCounter() {
+      count++;
+      document.getElementById('counter').textContent = count;
+    }
+
+    function decreaseCounter() {
+      count--;
+      if (count < 0) {
+        count = 0;
+      }
+      document.getElementById('counter').textContent = count;
+    }
+
+    function resetCounter() {
+      count = 0;
+      document.getElementById('counter').textContent = count;
+    }
+  </script>
+</body>
+</html>
